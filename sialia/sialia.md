@@ -15,7 +15,7 @@ github: https://github.com/feiyang3cat/sialia
 
 
 ## Server-side Solution
-![image.jpeg](image.jpeg)
+![./image.jpeg](image.jpeg)
 
 ### (A) Performance Related
 #### Major Changes that Brought the Most Impact
