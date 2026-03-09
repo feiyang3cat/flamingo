@@ -6,7 +6,6 @@ The source code has to be private for some reason,
 and this project is a simple large data post/get server for AI-agents. So the optimization is about minimizing the latency/resource usage.
 
 
-
 ## Client-side Solution (v2)
 ![client-side solution](opt-v2.jpg)
 
