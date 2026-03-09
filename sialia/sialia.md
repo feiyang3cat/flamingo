@@ -2,6 +2,10 @@
 
 github: https://github.com/feiyang3cat/sialia
 
+The source code has to be private for some reason,
+and this project is a simple large data post/get server for AI-agents. So the optimization is about minimizing the latency/resource usage.
+
+
 
 ## Client-side Solution (v2)
 ![client-side solution](opt-v2.jpg)
@@ -9,14 +13,12 @@ github: https://github.com/feiyang3cat/sialia
 Should read the server-side solution first to understand the problem and the solution. This part is put here for it is the final solution for the problem.
 
 (1)
-From trace of v1, we can find 60% of the latency is spent on decoding
+**From trace of v1 POST method, we can find 60% of the latency is spent on decoding**
 the http request into a json object which contains large input/output data.
 If SDK uploads only the ref data to the server and input/output directly to S3, this extra step is reduced. And the latency is expected to be reduced as well.
 
 (2)
 Also we can leverage client-side CPU for compression, and reuse the memory of the client-side for input/output data (in whichever case, the client-side need to set buffer for the input/output data). 
-
-
 
 
 
