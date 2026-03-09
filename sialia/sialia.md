@@ -15,7 +15,7 @@ github: https://github.com/feiyang3cat/sialia
 
 
 ## Server-side Solution
-![./image.jpeg](image.jpeg)
+![Server-side Solution](image.jpg)
 
 ### (A) Performance Related
 #### Major Changes that Brought the Most Impact
@@ -37,17 +37,17 @@ github: https://github.com/feiyang3cat/sialia
 
 ### (B) Code Organization
 1. structure:  -> changed by me
-- moving into internal package (normal golang project structure)
-- split into multiple files/functions:
-  -  main.go, s3.go, postgres.go, etc. (high-level single responsibility principle/small modules)
-  -  internal functions are more atomic and reusable
+   - moving into internal package (normal golang project structure)
+   - split into multiple files/functions:
+     - main.go, s3.go, postgres.go, etc. (high-level single responsibility principle/small modules)
+     - internal functions are more atomic and reusable
 
 2. dependencies: -> asked cc to implement the change
-- use dependency injection to manage initialization of singletons: fx
-- logging framework: zerolog
+   - use dependency injection to manage initialization of singletons: fx
+   - logging framework: zerolog
 
 3. easier commands and tools: -> asked cc to implement the change
--  make bench-record (bench, recording, frontend analysis)
+   - make bench-record (bench, recording, frontend analysis)
 
 ### (C) Working Pipeline -> designed by me, asked cc to implement the change
 - change code
@@ -58,12 +58,12 @@ github: https://github.com/feiyang3cat/sialia
 
 ### Major Dependencies of the server-side solution
 - Introduced by me:
-	github.com/goccy/go-json v0.10.5 -> fastest JSON library compatible with golang-json
-	github.com/rs/zerolog v1.34.0 -> structured logging library
-	go.uber.org/fx v1.24.0 -> Dependency injection library for managing singletons
+  - github.com/goccy/go-json v0.10.5 -> fastest JSON library compatible with golang-json
+  - github.com/rs/zerolog v1.34.0 -> structured logging library
+  - go.uber.org/fx v1.24.0 -> Dependency injection library for managing singletons
 - Existing dependencies:
-	github.com/aws/aws-sdk-go-v2 v1.41.2 -> S3 client
-	github.com/jackc/pgx/v5 v5.7.5 -> PostgreSQL client
-	github.com/go-chi/chi/v5 v5.1.0 -> HTTP router
-	go.opentelemetry.io/otel v1.42.0 -> OpenTelemetry library for tracing
-	github.com/joho/godotenv v1.5.1 -> load environment variables from .env file
+  - github.com/aws/aws-sdk-go-v2 v1.41.2 -> S3 client
+  - github.com/jackc/pgx/v5 v5.7.5 -> PostgreSQL client
+  - github.com/go-chi/chi/v5 v5.1.0 -> HTTP router
+  - go.opentelemetry.io/otel v1.42.0 -> OpenTelemetry library for tracing
+  - github.com/joho/godotenv v1.5.1 -> load environment variables from .env file
