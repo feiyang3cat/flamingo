@@ -1,7 +1,7 @@
-I enjoy diving into performance optimization! 
-A lot of my work is scattered across different private projects/others' projects/learning exercises,
-so I’m using this repo to keep everything in one place. 
-Each folder here is a fun 'side quest' I’ve worked on to sharpen my skills.
+![flamingo](profile.jpg)
 
+I enjoy diving into performance optimization. Much of my work lives across private repos, others’ projects, and learning exercises — so I’m using this repo to consolidate it all in one place. Each folder is a focused side quest I’ve taken on to sharpen a specific skill.
 
-- [sialia](sialia): a simple large data post/get server for AI-agents. Optimization is about minimizing the latency/resource usage. (level: easy)
+## Projects
+
+- [sialia](sialia): A lightweight server for large-data post/get, designed for AI agents. Optimization target: minimize latency and resource usage. *(level: easy)*
